@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Saving Tool</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file for styling -->
+</head>
+<body>
+    <div class="calculator">
+        <h1>Budget Saving Tool</h1>
+
+        <!-- Input fields for income -->
+        <div class="income-section">
+            <h2>Income</h2>
+            <label for="gross-income">Gross Annual Income (before tax):</label>
+            <input type="number" id="gross-income" name="gross-income" required>
+        </div>
+
+        <!-- Input fields for monthly debts -->
+        <div class="debts-section">
+            <h2>Monthly Debts</h2>
+            <label for="car-loans">Car Loans:</label>
+            <input type="number" id="car-loans" name="car-loans">
+            <label for="credit-card-minimums">Credit-Card Minimums:</label>
+            <input type="number" id="credit-card-minimums" name="credit-card-minimums">
+            <label for="student-loans">Student Loans:</label>
+            <input type="number" id="student-loans" name="student-loans">
+            <!-- Add input fields for other types of debts as needed -->
+        </div>
+
+        <!-- Input fields for monthly housing expenses -->
+        <div class="expenses-section">
+            <h2>Monthly Housing Expenses</h2>
+            <label for="property-tax">Property Tax (Monthly):</label>
+            <input type="number" id="property-tax" name="property-tax">
+            <label for="home-owners-insurance">Home Owners Insurance (Monthly):</label>
+            <input type="number" id="home-owners-insurance" name="home-owners-insurance">
+            <label for="pmi">PMI (Private Mortgage Insurance):</label>
+            <input type="number" id="pmi" name="pmi">
+            <label for="hoa-fees">HOA Fees:</label>
+            <input type="number" id="hoa-fees" name="hoa-fees">
+            <!-- Add input fields for other housing expenses as needed -->
+        </div>
+
+        <!-- Input fields for available funds -->
+        <div class="funds-section">
+            <h2>Available Funds</h2>
+            <label for="available-funds">Available Funds:</label>
+            <input type="number" id="available-funds" name="available-funds" required>
+        </div>
+
+        <!-- Input fields for financing -->
+        <div class="financing-section">
+            <h2>Financing</h2>
+            <label for="term-of-mortgage">Term of Mortgage (years):</label>
+            <input type="number" id="term-of-mortgage" name="term-of-mortgage">
+            <label for="annual-interest-rate">Annual Interest Rate:</label>
+            <input type="number" id="annual-interest-rate" name="annual-interest-rate">
+            <!-- Add input fields for other financing details as needed -->
+        </div>
+
+        <!-- Input fields for depreciation -->
+        <div class="depreciation-section">
+            <h2>Depreciation</h2>
+            <label for="depreciation-rate">Percentage of Home Price Depreciable:</label>
+            <input type="number" id="depreciation-rate" name="depreciation-rate">
+            <label for="years-to-depreciate">Years to Depreciate:</label>
+            <input type="number" id="years-to-depreciate" name="years-to-depreciate">
+            <!-- Add input fields for other depreciation details as needed -->
+        </div>
+
+        <!-- Input fields for estimated home price -->
+        <div class="home-price-section">
+            <h2>Estimated Home Price</h2>
+            <label for="estimated-home-price">Estimated Home Price:</label>
+            <input type="number" id="estimated-home-price" name="estimated-home-price" required>
+        </div>
+
+        <!-- Display calculated results -->
+        <div class="results-section">
+            <h2>Calculated Results</h2>
+            <!-- Add span elements to display calculated results here -->
+        </div>
+
+        <!-- Button to calculate -->
+        <button id="calculate-btn">Calculate</button>
+    </div>
+
+    <script src="script.js"></script> <!-- Link to external JavaScript file for calculations -->
+</body>
+</html>
