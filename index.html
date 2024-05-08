@@ -7,35 +7,55 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Budget Saving Tool</h1>
+    <header>
+        <h1>Budget Saving Tool for Home Buyers</h1>
+        <p>Use this tool to plan your finances and determine how much you can afford to spend on a new home.</p>
+    </header>
+    
+    <section class="form-section">
+        <h2>Income Information</h2>
+        <p><strong>Gross Annual Income:</strong> Your total income before taxes.</p>
+        <input type="number" id="gross-income" placeholder="Enter your annual income">
 
-        <div class="form-group">
-            <label for="gross-income">Gross Annual Income (before tax):</label>
-            <input type="number" id="gross-income" placeholder="Enter your income">
+        <h2>Monthly Debts</h2>
+        <p><strong>Car Loans, Credit Card Minimums, etc.:</strong> Monthly payments you are required to make.</p>
+        <input type="number" id="car-loans" placeholder="Car loans">
+        <input type="number" id="credit-cards" placeholder="Credit card payments">
+        <input type="number" id="student-loans" placeholder="Student loans">
+
+        <h2>Housing Expenses</h2>
+        <p><strong>Monthly Property Tax, Insurance, etc.:</strong> Ongoing monthly housing-related expenses.</p>
+        <input type="number" id="property-tax" placeholder="Property tax">
+        <input type="number" id="insurance" placeholder="Homeowners insurance">
+        <input type="number" id="pmi" placeholder="PMI">
+        <input type="number" id="hoa-fees" placeholder="HOA fees">
+
+        <h2>Available Funds</h2>
+        <p><strong>Available Funds:</strong> Funds currently available for home purchase.</p>
+        <input type="number" id="available-funds" placeholder="Available funds">
+
+        <h2>Loan Information</h2>
+        <p><strong>Mortgage Details:</strong> Details about the mortgage you plan to take.</p>
+        <input type="number" id="mortgage-term" placeholder="Term of mortgage (years)">
+        <input type="number" id="interest-rate" placeholder="Annual interest rate">
+
+        <h2>Depreciation</h2>
+        <p><strong>Depreciation of Home Price:</strong> Estimate the depreciation if applicable.</p>
+        <input type="number" id="depreciation-percentage" placeholder="Depreciable % of home price">
+        <input type="number" id="depreciation-years" placeholder="Years to depreciate">
+
+        <button onclick="calculateResults()">Calculate</button>
+    </section>
+
+    <section id="results" class="results-section">
+        <h2>Calculated Results</h2>
+        <div id="calculation-output"></div>
+        <div id="financial-advice">
+            <h3>Financial Tips:</h3>
+            <p id="tips"></p>
         </div>
-
-        <div class="form-group">
-            <label for="monthly-debts">Total Monthly Debts:</label>
-            <input type="number" id="monthly-debts" placeholder="Enter total debts">
-        </div>
-
-        <div class="form-group">
-            <label for="monthly-expenses">Monthly Housing Expenses:</label>
-            <input type="number" id="monthly-expenses" placeholder="Enter housing expenses">
-        </div>
-
-        <div class="form-group">
-            <label for="available-funds">Available Funds:</label>
-            <input type="number" id="available-funds" placeholder="Enter available funds">
-        </div>
-
-        <div class="form-group">
-            <button id="calculate-btn" onclick="calculate()">Calculate</button>
-        </div>
-
-        <div id="result" class="result"></div>
-    </div>
+    </section>
+    
     <script src="script.js"></script>
 </body>
 </html>
